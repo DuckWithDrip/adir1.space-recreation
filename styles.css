@@ -1,0 +1,84 @@
+body {
+    background-color:      #002244;
+    margin:                 0;
+    padding:                0;
+}
+
+.textFormatter {
+    color:                 #b2aca2;
+    font-size:              0.9em;
+    font-family:            Gotham, Helvetica Neue, Helvetica, Arial Narrow, Arial;
+}
+.header {
+    font-size:              1.5em;
+}
+.header i {
+    font-size:              0.4em;
+    font-style:             normal;
+}
+
+/* ---------------------------------- */
+/* -- header ------------------------ */
+/* -----------------------------------*/
+
+.headline {
+    flex:                   4;
+    margin-bottom:          26px;
+    text-align:             center;
+}
+.headline-space {
+    flex:                   1;
+}
+.header {
+    display:                flex;
+    flex-direction:         row;
+}
+
+.parting-line {
+    margin:                 10px;
+    margin-left:            60px;
+    margin-right:           60px;
+    border-bottom:          0.1em solid #111111;
+}
+
+/* ---------------------------------- */
+/* -- main -------------------------- */
+/* -----------------------------------*/
+
+.mainSegment {
+    display:                flex;
+}
+.item {
+    flex:                   4;
+    color:                  #336666;
+}
+.item li {
+    margin:                 5px 0px;
+    font-size:              0.9em;
+    display:                table;
+    margin:                 0 auto;
+    padding:                2px 4px;
+}
+.item li span {
+    white-space:            nowrap;
+    cursor:                 pointer;
+    background-color:      #013;
+    border-radius:          3px;
+    padding:                1px 4px;
+}
+
+.arrows {
+    flex:                   1;
+}
+.arrows li {
+    color:                  #333;
+}
+
+/* ---------------------------------- */
+/* -- canvas2d ---------------------- */
+/* -----------------------------------*/
+
+canvas {
+    position:               absolute;
+    z-index:                -1;
+}

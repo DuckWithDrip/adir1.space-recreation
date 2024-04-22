@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <title>adir1.space copy</title>
+</head>
+<body>
+    <div class="textFormatter">
+        <div class="outerSegment">
+            <div class="header">
+                <div class="headline-space"></div>
+                <div class="headline first-headline">Moon Ore<br><i></i></div>
+                <div class="headline">Raw Moon Goo<br> <i>After Reprocessing</i></div>
+                <div class="headline">Simple<br> <i>Reactions</i></div>
+                <div class="headline">Composite<br> <i>Reactions</i></div>
+            </div>
+
+            <div class="parting-line"></div>
+
+            <canvas id="lineCanvas"></canvas>
+            <div class="mainSegment" id="main">
+                <div class="item arrows">
+                    <ul class="arrows">
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                        <li>→</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul id="planets">
+                        <li id="bitumens" class=""><span class="hydrocarbons">Bitumens</span></li>
+                        <li id="coesite" class=""><span class="silicates">Coesite</span></li>
+                        <li id="sylvite" class=""><span class="evaporite-deposits">Sylvite</span></li>
+                        <li id="zeolite" class=""><span class="atmospheric-gases">Zeolite</span></li>
+                        <li id="cobaltite" class=""><span class="cobalt">Cobaltite</span></li>
+                        <li id="euxenite" class=""><span class="scandium">Euxenite</span></li>
+                        <li id="scheelite" class=""><span class="tungsten">Scheelite</span></li>
+                        <li id="titanite" class=""><span class="titanium">Titanite</span></li>
+                        <li id="chromite" class=""><span class="chromium hydrocarbons">Chromite</span></li>
+                        <li id="otavite" class=""><span class="atmospheric-gases cadmium">Otavite</span></li>
+                        <li id="sperrylite" class=""><span class="evaporite-deposits platinum">Sperrylite</span></li>
+                        <li id="vanadinite" class=""><span class="silicates vanadium">Vanadinite</span></li>
+                        <li id="carnotite" class=""><span class="atmospheric-gases cobalt technetium">Carnotite</span></li>
+                        <li id="cinnabar" class=""><span class="evaporite-deposits mercury tungsten">Cinnabar</span></li>
+                        <li id="pollucite"><span class="caesium hydrocarbons scandium">Pollucite</span></li>
+                        <li id="zircon"><span class="hafnium silicates titanium">Zircon</span></li>
+                        <li id="loparite"><span class="hydrocarbons platinum promethium scandium">Loparite</span></li>
+                        <li id="monazite"><span class="chromium evaporite-deposits neodymium tungsten">Monazite</span></li>
+                        <li id="xenotime"><span class="atmospheric-gases cobalt dysprosium vanadium">Xenotime</span></li>
+                        <li id="ytterbite"><span class="cadmium silicates thulium titanium">Ytterbite</span></li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <ul id="basic">
+                        <li class="zeolite otavite carnotite xenotime" id="atmospheric-gases"><span class="sulfuric-acid">Atmospheric Gases</span></li>
+                        <li class="otavite ytterbite" id="cadmium"><span class="caesarium-cadmide crystallite-alloy prometium">Cadmium</span></li>
+                        <li class="pollucite" id="caesium"><span class="caesarium-cadmide solerium">Caesium</span></li>
+                        <li class="chromite monazite" id="chromium"><span class="hexite solerium titanium-chromide">Chromium</span></li>
+                        <li class="cobaltite carnotite xenotime" id="cobalt"><span class="crystallite-alloy">Cobalt</span></li>
+                        <li class="xenotime" id="dysprosium"><span class="dysporite ferrofluid">Dysprosium</span></li>
+                        <li class="sylvite sperrylite cinnabar monazite" id="evaporite-deposits"><span class="ceramic-powder silicon-diborite sulfuric-acid">Evaporite Deposits</span></li>
+                        <li class="zircon" id="hafnium"><span class="ferrofluid thulium-hafnite vanadium-hafnite">Hafnium</span></li>
+                        <li class="bitumens chromite pollucite loparite" id="hydrocarbons"><span class="carbon-polymers">Hydrocarbons</span></li>
+                        <li class="cinnabar" id="mercury"><span class="dysporite neo-mercurite promethium-mercurite">Mercury</span></li>
+                        <li class="monazite" id="neodymium"><span class="fluxed-condensates neo-mercurite">Neodymium</span></li>
+                        <li class="sperrylite loparite" id="platinum"><span class="hexite platinum-technite rolled-tungsten-alloy">Platinum</span></li>
+                        <li class="loparite" id="promethium"><span class="hyperflurite promethium-mercurite prometium">Promethium</span></li>
+                        <li class="euxenite pollucite loparite" id="scandium"><span class="fernite-alloy">Scandium</span></li>
+                        <li class="coesite vanadinite zircon ytterbite" id="silicates"><span class="carbon-polymers ceramic-powder silicon-diborite">Silicates</span></li>
+                        <li class="carnotite" id="technetium"><span class="platinum-technite">Technetium</span></li>
+                        <li class="ytterbite" id="thulium"><span class="fluxed-condensates thulium-hafnite">Thulium</span></li>
+                        <li class="titanite zircon ytterbite" id="titanium"><span class="titanium-chromide">Titanium</span></li>
+                        <li class="scheelite cinnabar monazite" id="tungsten"><span class="rolled-tungsten-alloy">Tungsten</span></li>
+                        <li class="vanadinite xenotime" id="vanadium"><span class="fernite-alloy hyperflurite vanadium-hafnite">Vanadium</span></li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <ul id="specialized">
+                        <li class="cadmium caesium" id="caesarium-cadmide"><span class="fermionic-condensates phenolic-composites">Caesarium Cadmide</span></li>
+                        <li class="hydrocarbons silicates" id="carbon-polymers"><span class="crystalline-carbonide fullerides">Carbon Polymers</span></li>
+                        <li class="evaporite-deposits silicates" id="ceramic-powder"><span class="fernite-carbide sylramic-fibers">Ceramic Powder</span></li>
+                        <li class="cobalt cadmium" id="crystallite-alloy"><span class="crystalline-carbonide photonic-metamaterials">Crystallite Alloy</span></li>
+                        <li class="mercury dysprosium" id="dysporite"><span class="fermionic-condensates hypersynaptic-fibers">Dysporite</span></li>
+                        <li class="scandium vanadium" id="fernite-alloy"><span class="fernite-carbide plasmonic-metamaterials">Fernite Alloy</span></li>
+                        <li class="hafnium dysprosium" id="ferrofluid"><span class="ferrogel nonlinear-metamaterials">Ferrofluid</span></li>
+                        <li class="neodymium thulium" id="fluxed-condensates"><span class="fermionic-condensates">Fluxed Condensates</span></li>
+                        <li class="chromium platinum" id="hexite"><span class="ferrogel sylramic-fibers">Hexite</span></li>
+                        <li class="vanadium promethium" id="hyperflurite"><span class="ferrogel">Hyperflurite</span></li>
+                        <li class="mercury neodymium" id="neo-mercurite"><span class="nanotransistors plasmonic-metamaterials">Neo Mercurite</span></li>
+                        <li class="platinum technetium" id="platinum-technite"><span class="fullerides nanotransistors">Platinum Technite</span></li>
+                        <li class="mercury promethium" id="promethium-mercurite"><span class="terahertz-metamaterials">Promethium Mercurite</span></li>
+                        <li class="cadmium promethium" id="prometium"><span class="fermionic-condensates ferrogel">Prometium</span></li>
+                        <li class="tungsten platinum" id="rolled-tungsten-alloy"><span class="terahertz-metamaterials tungsten-carbide">Rolled Tungsten Alloy</span></li>
+                        <li class="evaporite-deposits silicates" id="silicon-diborite"><span class="phenolic-composites titanium-carbide">Silicon Diborite</span></li>
+                        <li class="chromium caesium" id="solerium"><span class="hypersynaptic-fibers">Solerium</span></li>
+                        <li class="atmospheric-gases evaporite-deposits" id="sulfuric-acid"><span class="nanotransistors tungsten-carbide">Sulfuric Acid</span></li>
+                        <li class="hafnium thulium" id="thulium-hafnite"><span class="photonic-metamaterials">Thulium Hafnite</span></li>
+                        <li class="titanium chromium" id="titanium-chromide"><span class="nonlinear-metamaterials titanium-carbide">Titanium Chromide</span></li>
+                        <li class="vanadium hafnium" id="vanadium-hafnite"><span class="hypersynaptic-fibers phenolic-composites">Vanadium Hafnite</span></li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <ul id="advanced">
+                        <li class="crystallite-alloy carbon-polymers" id="crystalline-carbonide"><span>Crystalline Carbonide</span></li>
+                        <li class="caesarium-cadmide dysporite fluxed-condensates prometium" id="fermionic-condensates"><span>Fermionic Condensates</span></li>
+                        <li class="fernite-alloy ceramic-powder" id="fernite-carbide"><span>Fernite Carbide</span></li>
+                        <li class="hexite hyperflurite ferrofluid prometium" id="ferrogel"><span>Ferrogel</span></li>
+                        <li class="carbon-polymers platinum-technite" id="fullerides"><span>Fullerides</span></li>
+                        <li class="solerium dysporite vanadium-hafnite" id="hypersynaptic-fibers"><span>Hypersynaptic Fibers</span></li>
+                        <li class="sulfuric-acid platinum-technite neo-mercurite" id="nanotransistors"><span>Nanotransistors</span></li>
+                        <li class="titanium-chromide ferrofluid" id="nonlinear-metamaterials"><span>Nonlinear Metamaterials</span></li>
+                        <li class="silicon-diborite caesarium-cadmide vanadium-hafnite" id="phenolic-composites"><span>Phenolic Composites</span></li>
+                        <li class="crystallite-alloy thulium-hafnite" id="photonic-metamaterials"><span>Photonic Metamaterials</span></li>
+                        <li class="fernite-alloy neo-mercurite" id="plasmonic-metamaterials"><span>Plasmonic Metamaterials</span></li>
+                        <li class="ceramic-powder hexite" id="sylramic-fibers"><span>Sylramic Fibers</span></li>
+                        <li class="rolled-tungsten-alloy promethium-mercurite" id="terahertz-metamaterials"><span>Terahertz Metamaterials</span></li>
+                        <li class="titanium-chromide silicon-diborite" id="titanium-carbide"><span>Titanium Carbide</span></li>
+                        <li class="rolled-tungsten-alloy sulfuric-acid" id="tungsten-carbide"><span>Tungsten Carbide</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="parting-line"></div>
+        </div>
+    </div>
+    <script src="script.js"></script> <!--load script after the page loaded-->
+</body>
+</html>
