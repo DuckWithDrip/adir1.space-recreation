@@ -10,7 +10,7 @@ var height = document.getElementById("main").offsetHeight;
 const canvas = document.getElementById("lineCanvas");
 const ctx = canvas.getContext("2d");
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   // get size of div for drawing the line. update canvas if user resizes the window.
   $(window).resize(function () {
@@ -92,7 +92,7 @@ $(document).ready(function() {
       changeState(defaultColor);
     }
   });
-  
+
 
 
 
@@ -193,14 +193,12 @@ $(document).ready(function() {
   function drawLine() {
     let i = 0;
     let strokeColor = randomHexColor();
+
     while (i < lineCoords.length) {
       let startX = lineCoords[i][0];
       let startY = lineCoords[i][1];
       let endX = lineCoords[i][2];
       let endY = lineCoords[i][3];
-
-      let a = (startX + startY)*2;
-      let b = (endX + endY)*2;
 
       ctx.moveTo(startX, startY);
       ctx.lineTo(endX, endY);
